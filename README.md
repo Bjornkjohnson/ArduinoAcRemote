@@ -15,41 +15,41 @@ In conclusion, after some hiccups, I am very happy to say that I was able to com
 Usage:
 	The device has two modes, “receive” and “transmit”, which a user can switch between using a toggle switch.  When the device is powered up, it will automatically connect to a predefined wireless network.  Once fully connected it will signal that it is ready to decode IR by light the first red LED on the top of the device.  The user will then press power on the remote they wish to capture.  When the signal is done being captured, a green light indicates that the process is finished.  The user can then proceed to capture up and down signals in a similar fashion.  Once the receive phase is complete, the user can then switch to transmit mode.  Once in transmit mode, the user connects to the arduinos web address through a web browser, followed by the appropriate code.  Ex. 192.168.1.2/power will transmit the power signal. The web page will display the current room temperature as well as the signal just transmitted. 
 	
-	PARTS LIST:
-Arduino Uno
-Adafruit CC3000 WiFi Shield (internet connection)
-5 x 5mm 1.7V 20mA 800mcd Wide Angle Red Leds 
-3 x capture start indicators
-1 x transmit indicator
-1 x receive indicator
-5 x 180 ohm resistors(for red leds)
-3 x 5mm 2.1V 30mA 630mcd Green Leds
-for capture complete indicators
-3 x 100 ohm resistors (for green leds)
-9-12V ac adapter(for powering the device)
-1 x IR Receiver Diode - TSOP38238(for capturing signal)
-1 x 1.5VDC 50mA 840-850nm IR Led(for transmitting signal)
-1 x Waterproof DS18B20 Digital temperature sensor  (for getting room temp)
-4.7k ohm resistor for temp sensor
-wiring breadboard
-a whole mess of wires
-toggle switch(to switch between transmit and receive) 
-1 bike light(for when you accidentally burn out one of your red leds)
-WD MyBook case to house everything
+#PARTS LIST
+* Arduino Uno
+* Adafruit CC3000 WiFi Shield (internet connection)
+* 5 x 5mm 1.7V 20mA 800mcd Wide Angle Red Leds 
+* 3 x capture start indicators
+* 1 x transmit indicator
+* 1 x receive indicator
+* 5 x 180 ohm resistors(for red leds)
+* 3 x 5mm 2.1V 30mA 630mcd Green Leds
+* for capture complete indicators
+* 3 x 100 ohm resistors (for green leds)
+* 9-12V ac adapter(for powering the device)
+* 1 x IR Receiver Diode - TSOP38238(for capturing signal)
+* 1 x 1.5VDC 50mA 840-850nm IR Led(for transmitting signal)
+* 1 x Waterproof DS18B20 Digital temperature sensor  (for getting room temp)
+* 4.7k ohm resistor for temp sensor
+* wiring breadboard
+* a whole mess of wires
+* toggle switch(to switch between transmit and receive) 
+* 1 bike light(for when you accidentally burn out one of your red leds)
+* WD MyBook case to house everything
 
 	
 	
 
 
 
-LIBRARY LIST
-Ken Shirrifs IR Library
-Adafruit_CC3000.h(for wifi Shield)
-SPI.h(for wifi Shield)
-utility/debug.h(for wifi Shield)
-utility/socket.h(for wifi Shield)
-IRremote.h(from Ken Shirrif)
-OneWire.h(for temp sensor)
+#LIBRARY LIST
+* Ken Shirrifs IR Library
+* Adafruit_CC3000.h(for wifi Shield)
+* SPI.h(for wifi Shield)
+* utility/debug.h(for wifi Shield)
+* utility/socket.h(for wifi Shield)
+* IRremote.h(from Ken Shirrif)
+* OneWire.h(for temp sensor)
 
 
 
@@ -60,7 +60,7 @@ OneWire.h(for temp sensor)
 
 
 
-Sources
+#Sources
 
 [1] Ken Shirrifs IR Library http://www.righto.com/2009/08/multi-protocol-infrared-remote-library.html
 
