@@ -1,9 +1,9 @@
 # ArduinoAcRemote
 Arduino project to remotely control airconditioner
 
+#Description of Challenges
 
-
-	For this project I intended to create a wifi enabled remote to control a home air conditioner (or other IR controlled devices) via an iphone app. I was able to achieve this with a few changes to my original plans.
+For this project I intended to create a wifi enabled remote to control a home air conditioner (or other IR controlled devices) via an iphone app. I was able to achieve this with a few changes to my original plans.
 My hopes at the beginning were to decode the infrared on my own, using no other libraries.  I was able to decode IR signals by measuring the incoming 38khz on pulses vs the delay in between.  Unfortunately something in my timing was off (we are dealing with signals in the microsecond range) and I was not able to reliably retransmit the signal.  My best guess is that the timing would be off due to the angle of the original transmission (from a remote) and that it would then throw the retransmission off.  
 Also, when collecting raw IR signal it is difficult to tell when the transmission ends and restarts (if you hold down the power button it will keep transmitting signal that may not be useful). A final difficulty was in the fact that there at least 4 well documented ways of transmitting IR (SONY, NEC, RC5, and RC6) as well as many undocumented ways.  Even within a specific protocol such as NEC, the are variations on the way the code is repeated when a button is held down. 
 To solve this problem I used Ken Shirrif’s IR library[1] to do much of the heavy lifting. With this library I was easily able to decode and retransmit NEC as well as Sony codes.  The library has specifications which it can match signal to.  As long as a code is within a certain tolerance, it is able to match it to a specific protocol for retransmission.
